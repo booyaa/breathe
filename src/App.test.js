@@ -7,3 +7,9 @@ it('renders without crashing', () => {
   ReactDOM.render(<App />, div);
   ReactDOM.unmountComponentAtNode(div);
 });
+
+// Has a failing test that appears when running make test
+
+// it('throws a wobbly', () => {
+//   throw new Exception("whoops");
+// });

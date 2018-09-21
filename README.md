@@ -9,6 +9,12 @@ make docker-build
 make serve
 ```
 
+## Testing
+
+```shell
+make test
+```
+
 ## License
 
 MIT
