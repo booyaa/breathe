@@ -15,6 +15,12 @@ make serve
 make test
 ```
 
+## Component sandbox
+
+```shell
+make storybook
+```
+
 ## License
 
 MIT

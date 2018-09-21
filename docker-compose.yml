@@ -5,5 +5,7 @@ services:
     volumes:
       - ./public:/app/public
       - ./src:/app/src
+      - ./.storybook:/app/.storybook
     ports:
       - "3000:3000"
+      - "9009:9009"
