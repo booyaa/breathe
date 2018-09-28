@@ -3,8 +3,12 @@
 }
 
 .App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+  animation-name: App-logo-spin ;
+  animation-iteration-count: infinite; 
+  animation-direction: alternate-reverse;
+  animation-duration: 5s;
+
+  height: 300px; 
 }
 
 .App-header {
@@ -23,6 +27,8 @@
 }
 
 @keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+  /* https://developer.mozilla.org/en-US/docs/Web/CSS/transform */
+  from { transform: scale(0.5, 0.5); }
+  to { transform: scale(1,1); }
 }
+

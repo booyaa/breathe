@@ -1,8 +1,14 @@
 import React from 'react';
 
+import CountdownTimer from '../CountdownTimer';
 class Header extends React.Component {
     render() {
-        return <div className="header"><h1>Breathe</h1></div>
+        return (
+            <header className="App-header">
+                <h1 className="App-title">Breathe</h1>
+                <CountdownTimer />
+            </header>
+        );
     }
 }
 
