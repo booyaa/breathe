@@ -1,51 +1,37 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Header from './Components/Header';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Breathe</h1>
-        </header>
+        <Header className="App-header" />
         <p className="App-intro">
-          Breathe in, Hold, Breathe out, Hold..<br />
-          <Clock />
+          <img src={logo} className="App-logo" alt="logo" /><br />
         </p>
+        <footer className="App-footer"><PlayPause/></footer>
       </div>
     );
   }
 }
 
-class Clock extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {date: new Date()};
+class PlayPause extends Component {
+  state = {
+    isPlaying: false
   }
 
-  componentDidMount() {
-    this.timerID = setInterval(
-      () => this.tick(),
-      1000
-    );
-  }
-
-  componentWillUnmount() {
-    clearInterval(this.timerID);
-  }
-
-  tick() {
+  pressed = () => {
     this.setState({
-      date: new Date()
+      isPlaying: !this.state.isPlaying
     });
   }
 
   render() {
-    return (
-      <em>{this.state.date.toLocaleTimeString()}.</em>
-    );
+    return (      
+      <button onClick={this.pressed}>{this.state.isPlaying ? 'Pause' : 'Play'}</button>
+    )
   }
 }
 
